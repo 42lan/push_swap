@@ -6,7 +6,7 @@
 #    By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/20 11:39:15 by amalsago          #+#    #+#              #
-#    Updated: 2020/02/22 11:06:38 by amalsago         ###   ########.fr        #
+#    Updated: 2020/02/22 14:05:49 by amalsago         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,9 @@ SRCNAME     = checker.c\
 			  errors.c\
 			  operations.c\
 			  parse_args.c\
-			  stack.c
+			  stack.c\
+			  swap.c\
+			  tools.c
 
 # **************************************************************************** #
 # Automatic variables where are listed the names of sources and objects files
