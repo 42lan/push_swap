@@ -29,14 +29,15 @@ typedef struct	s_stack
 
 }				t_stack;
 
-t_stack			*stack(void);
+void			initialize_stack(char **av);
+t_stack			*get_stack(void);
 
 void			parse_args(int ac, char ***av);
-char			**prepare_args(char **av);
 void			check_ints(char **av);
 void			check_dups(char **av);
 void			check_lims(char **av);
-int				is_present(int number, char **av);
+
+void			sa(void);
 
 void	p(char **av);
 /*
