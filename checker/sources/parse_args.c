@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 12:02:03 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/22 10:22:40 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/02/22 13:58:24 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,6 @@
 ** check_lims() verify that all arguments don't exceed the limits of int
 */
 
-void	p(char **av)
-{
-	int i = -1;
-	while (av[++i])
-		ft_printf("[%s]\n", av[i]);
-}
 
 static char		**prepare_args(char **av)
 {
