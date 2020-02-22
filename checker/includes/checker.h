@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 17:03:15 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/21 22:09:43 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/02/22 01:34:22 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,18 @@
 # include "get_next_line.h"
 # include "system_libraries.h"
 
-void			parse_args(int ac, char **av);
+typedef struct	s_stack
+{
+	int			*stack_a;
+	int			*stack_b;
+	int			index_a;
+	int			index_b;
+
+}				t_stack;
+
+t_stack			*stack(void);
+
+void			parse_args(int ac, char ***av);
 char			**prepare_args(char **av);
 void			check_ints(char **av);
 void			check_dups(char **av);
