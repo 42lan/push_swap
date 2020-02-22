@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 21:13:28 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/21 22:03:26 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/02/22 10:10:08 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void			check_ints(char **av)
 			if (av[i][j] == '\0')
 			{
 				ft_printf("No number after +/- sign\n");// REMOVE
-				ft_perror_exit("KO");
+				ft_perror_exit("Error");
 			}
 		}
 		while (av[i][j])
@@ -35,14 +35,14 @@ void			check_ints(char **av)
 			if (!ft_isdigit(av[i][j]))
 			{
 				ft_printf("%s isn't a number\n", av[i]);// REMOVE
-				ft_perror_exit("KO");
+				ft_perror_exit("Error");
 			}
 			++j;
 		}
 	}
 }
 
-int				is_present(int number, char **av)
+static int				is_present(int number, char **av)
 {
 	int			i;
 
@@ -65,7 +65,7 @@ void			check_dups(char **av)
 		if (is_present(number, av + i + 1))
 		{
 			ft_printf("%s has a duplicate\n", av[i]);// REMOVE
-			ft_perror_exit("KO");
+			ft_perror_exit("Error");
 		}
 	}
 }
@@ -82,7 +82,7 @@ void			check_lims(char **av)
 		if (number < INT_MIN || number > INT_MAX)
 		{
 			ft_printf("%s is < INT_MIN or > INT_MAX\n", av[i]);// REMOVE
-			ft_perror_exit("KO");
+			ft_perror_exit("Error");
 		}
 	}
 }
