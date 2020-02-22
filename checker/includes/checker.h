@@ -56,6 +56,13 @@ int			valid_operation(char *op);
 void		execute_operation(char *op);
 void		sa(void);
 void		sb(void);
+void		ss(void);
+void		ra(void);
+void		rb(void);
+void		rr(void);
+void		rra(void);
+void		rrb(void);
+void		rrr(void);
 
 /*
 ** TOOLS
