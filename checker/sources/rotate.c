@@ -6,11 +6,15 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 14:24:01 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/22 14:49:37 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/02/22 18:00:05 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
+
+/*
+** rotate_up() - shift up all elements of given stack
+*/
 
 static void		rotate_up(int *stack, int len)
 {
