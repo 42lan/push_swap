@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 12:02:03 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/22 01:42:19 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/02/22 10:22:40 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,22 @@ void	p(char **av)
 		ft_printf("[%s]\n", av[i]);
 }
 
-void		parse_args(int ac, char ***p_av)
+static char		**prepare_args(char **av)
 {
-	char	**av;
+	char		**new_av;
+
+	new_av = ft_strsplit_spaces(*av);
+	if (!*new_av)
+	{
+		ft_printf("Argument is empty");// REMOVE
+		exit(EXIT_FAILURE);
+	}
+	return (new_av);
+}
+
+void			parse_args(int ac, char ***p_av)
+{
+	char		**av;
 
 	(ac == 2) ? *p_av = prepare_args(*p_av) : 0;
 	av = *p_av;
