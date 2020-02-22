@@ -38,6 +38,7 @@ void			check_dups(char **av);
 void			check_lims(char **av);
 int				is_present(int number, char **av);
 
+void	p(char **av);
 /*
 ** CHECKER_H
 */
