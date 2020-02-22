@@ -17,6 +17,7 @@
 # define CHECKER_H
 
 # include "libft.h"
+# include "get_next_line.h"
 # include "system_libraries.h"
 
 void			parse_args(int ac, char **av);
