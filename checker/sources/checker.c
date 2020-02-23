@@ -27,13 +27,7 @@ int			main(int ac, char **av)
 		exit(EXIT_FAILURE);
 	parse_args(ac, &av);
 	initialize_stack(av);
-
-
-	ft_printf("A:");
-	print_stack(get_stack()->stack_a, get_stack()->top_index_a);
-	ft_printf("B:");
-	print_stack(get_stack()->stack_b, get_stack()->top_index_b);
-
+	print_stacks_state();
 	while (get_next_line(0, &line) > 0)
 	{
 		if (!*line)
@@ -48,11 +42,7 @@ int			main(int ac, char **av)
 			ft_printf("Invalid operation: [%s]\n", line);// REMOVE
 			ft_perror_exit("Error");
 		}
-
-		ft_printf("A:");
-		print_stack(get_stack()->stack_a, get_stack()->top_index_a);
-		ft_printf("B:");
-		print_stack(get_stack()->stack_b, get_stack()->top_index_b);
+		print_stacks_state();
 	}
 	check_sort();
 	print_sorted(moves);
