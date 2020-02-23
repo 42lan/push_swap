@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 17:03:15 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/23 14:17:11 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/02/23 14:25:35 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,9 @@ void		rr(void);
 void		rra(void);
 void		rrb(void);
 void		rrr(void);
+
+
+void		check_sort(void);
 
 /*
 ** TOOLS
