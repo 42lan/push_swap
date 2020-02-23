@@ -6,22 +6,20 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 13:58:16 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/23 16:27:04 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/02/23 17:45:41 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
-void	print_av(char **av)
+void	print_stack(char stack_name, int *stack, int top_index)
 {
-	int i = -1;
-	while (av[++i])
-	{
-		if (av[i])
-			ft_printf("[%s]", av[i]);
-		else
-			ft_printf("[ ]");
-	}
+	int	i;
+
+	i = -1;
+	ft_printf("Stack %c: ", stack_name);
+	while (++i <= top_index)
+		ft_printf("[%d]", stack[i]);
 	ft_printf("\n");
 }
 
