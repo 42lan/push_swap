@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 17:03:15 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/22 17:51:07 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/02/23 14:17:11 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,17 +23,16 @@
 /*
 ** STACKS
 **
-** len_a - is the index length of stack_a
-** len_b - is the index length of stack_b
+** top_index_a - is the top element of stack_a
+** top_index_b - is the top element of stack_b
 */
 
 typedef struct	s_stack
 {
 	int			*stack_a;
 	int			*stack_b;
-	int			len_a;
-	int			len_b;
-
+	int			top_index_a;
+	int			top_index_b;
 }				t_stack;
 
 void			initialize_stack(char **av);
