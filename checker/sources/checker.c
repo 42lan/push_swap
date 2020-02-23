@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 11:52:46 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/23 17:45:51 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/02/23 18:12:10 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int			main(int ac, char **av)
 		exit(EXIT_FAILURE);
 	parse_args(ac, &av);
 	initialize_stack(av);
-	print_stacks_state();
+	//print_stacks_state();
 	while (get_next_line(0, &line) > 0)
 	{
 		if (!*line)
@@ -42,7 +42,8 @@ int			main(int ac, char **av)
 			ft_printf("Invalid operation: [%s]\n", line);// REMOVE
 			ft_perror_exit("Error");
 		}
-		print_stacks_state();
+		//print_stacks_state();
+		ft_strdel(&line);
 	}
 	check_sort();
 	print_sorted(moves);
