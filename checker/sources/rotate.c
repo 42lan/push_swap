@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 14:24:01 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/22 18:00:05 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/02/23 12:32:42 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,26 +16,24 @@
 ** rotate_up() - shift up all elements of given stack
 */
 
-static void		rotate_up(int *stack, int len)
+static void		rotate_up(int *stack, int top_index)
 {
-	int		i;
-	int		first;
+	int		top;
 
-	i = -1;
-	first = stack[0];
-	while (++i < len)
-		stack[i] = stack[i + 1];
-	stack[i] = first;
+	top = stack[top_index];
+	while (--top_index >= 0)
+		stack[top_index + 1] = stack[top_index];
+	stack[0] = top;
 }
 
 void	ra(void)
 {
-	rotate_up(get_stack()->stack_a, get_stack()->len_a);
+	rotate_up(get_stack()->stack_a, get_stack()->top_index_a);
 }
 
 void	rb(void)
 {
-	rotate_up(get_stack()->stack_b, get_stack()->len_b);
+	rotate_up(get_stack()->stack_b, get_stack()->top_index_b);
 }
 
 void	rr(void)
