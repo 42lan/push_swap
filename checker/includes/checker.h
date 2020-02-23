@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 17:03:15 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/23 14:25:35 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/02/23 17:46:09 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,8 +72,9 @@ void		check_sort(void);
 ** TOOLS
 */
 
-void	print_av(char **av);
-void	print_stack(int *stack, int size);
+void	print_stack(char stack_name, int *stack, int size);
+void	print_stacks_state(void);
+void	print_sorted(int moves);
 
 /*
 ** CHECKER_H
