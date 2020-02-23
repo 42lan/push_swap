@@ -53,6 +53,8 @@ void			check_lims(char **av);
 
 int			valid_operation(char *op);
 void		execute_operation(char *op);
+void		pa(void);
+void		pb(void);
 void		sa(void);
 void		sb(void);
 void		ss(void);
