@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 13:58:16 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/22 14:23:02 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/02/23 13:52:12 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ void	print_av(char **av)
 	ft_printf("\n");
 }
 
-void print_stack(int *stack, int size)
+void print_stack(int *stack, int top_index)
 {
 	int j = -1;
-	while (++j <= size)
+	while (++j <= top_index)
 	{
 		if (stack[j])
 			ft_printf("[%d]", stack[j]);
