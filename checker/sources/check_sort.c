@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/23 14:24:36 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/23 14:24:46 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/02/23 16:32:53 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void		check_sort(void)
 	min = get_stack()->stack_a[i];
 	while (--i >= 0)
 	{
-		if (get_stack()->stack_a[i] > min)
+		if (get_stack()->stack_a[i] < min)
 		{
 			ft_printf("Stack A isn't sorted\n");// REMOVE
 			ft_perror_exit("KO");
