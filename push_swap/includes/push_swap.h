@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 11:58:13 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/24 16:58:56 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/02/24 18:17:33 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,9 @@ void			sort_stack(void);
 */
 
 void			parse_args(int ac, char ***av);
-void			check_ints(char **av);
-void			check_dups(char **av);
-void			check_lims(char **av);
+int				check_ints(char **av);
+int				check_dups(char **av);
+int				check_lims(char **av);
 
 /*
 ** OPERATIONS
