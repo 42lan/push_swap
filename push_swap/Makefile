@@ -6,7 +6,7 @@
 #    By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/20 11:39:15 by amalsago          #+#    #+#              #
-#    Updated: 2020/02/24 16:59:50 by amalsago         ###   ########.fr        #
+#    Updated: 2020/02/24 19:07:28 by amalsago         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ IOPT        = -I $(INCDIR) -I $(LIBDIR)/$(INCDIR)
 
 AR          = ar -rc
 LESS        = less
-MAKE        = make -C
+MAKE        = make -sC
 RANLIB      = ranlib
 NORMINETTE  = /usr/bin/norminette
 MKDIR       = mkdir -p
