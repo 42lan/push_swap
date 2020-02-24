@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 01:52:32 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/24 18:24:01 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/02/24 19:00:14 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,15 +35,18 @@ static void		swap_top2el(int *stack, int top_index)
 void			sa(void)
 {
 	swap_top2el(get_stack()->stack_a, get_stack()->top_index_a);
+	ft_printf("sa\n");
 }
 
 void			sb(void)
 {
 	swap_top2el(get_stack()->stack_b, get_stack()->top_index_b);
+	ft_printf("sb\n");
 }
 
 void			ss(void)
 {
 	sa();
 	sb();
+	ft_printf("ss\n");
 }

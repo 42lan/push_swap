@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 18:32:30 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/24 18:24:12 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/02/24 18:59:02 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ void	pa(void)
 	(get_stack()->top_index_a)++;
 	get_stack()->stack_a[get_stack()->top_index_a] = get_stack()->stack_b[get_stack()->top_index_b];
 	(get_stack()->top_index_b)--;
+	ft_printf("pa\n");
 }
 
 void	pb(void)
@@ -34,4 +35,5 @@ void	pb(void)
 	(get_stack()->top_index_b)++;
 	get_stack()->stack_b[get_stack()->top_index_b] = get_stack()->stack_a[get_stack()->top_index_a];
 	(get_stack()->top_index_a)--;
+	ft_printf("pb\n");
 }
