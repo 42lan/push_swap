@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 11:52:46 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/23 18:12:10 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/02/24 10:20:52 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,14 @@
 ** cause exit with failure code error.
 */
 
-int			main(int ac, char **av)
+static int	read_and_execute(void)
 {
-	char	*line;
 	int		moves;
+	char	*line;
 
 	moves = 0;
-	if (ac < 2 || !**(++av))
-		exit(EXIT_FAILURE);
-	parse_args(ac, &av);
-	initialize_stack(av);
-	//print_stacks_state();
 	while (get_next_line(0, &line) > 0)
 	{
-		if (!*line)
-			break;
 		if (valid_operation(line))
 		{
 			execute_operation(line);
@@ -45,6 +38,19 @@ int			main(int ac, char **av)
 		//print_stacks_state();
 		ft_strdel(&line);
 	}
+	return (moves);
+}
+
+int			main(int ac, char **av)
+{
+	int		moves;
+
+	if (ac < 2 || !**(++av))
+		exit(EXIT_FAILURE);
+	parse_args(ac, &av);
+	initialize_stack(av);
+	//print_stacks_state();
+	moves = read_and_execute();
 	check_sort();
 	print_sorted(moves);
 	return (0);
