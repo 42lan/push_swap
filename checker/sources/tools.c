@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 13:58:16 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/23 17:57:01 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/02/23 21:38:52 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,11 @@ void	print_stacks_state(void)
 
 void	print_sorted(int moves)
 {
-	ft_printf("Stack A is sorted in ");
-	ft_printf("%d %s\n", moves,	0 == moves || moves == 1 ? "move" : "moves");
+	if (moves == 0)
+		ft_printf("Stack A was initialy sorted.");
+	else
+	{
+		ft_printf("Stack A is sorted in ");
+		ft_printf("%d %s\n", moves,	moves == 1 ? "move" : "moves");
+	}
 }
