@@ -23,24 +23,24 @@ void			two_sort(void)
 
 void			three_sort(void)
 {
-	int			*stack;
+	int			*s;
 
-	stack = get_stack()->stack_a;
-	if (stack[2] > stack[1] && stack[2] < stack[0] && stack[1] < stack[0])
+	s = get_stack()->stack_a;
+	if (s[2] > s[1] && s[2] < s[0] && s[1] < s[0])
 		sa();
-	else if (stack[2] > stack[1] && stack[2] > stack[0] && stack[1] > stack[0])
+	else if (s[2] > s[1] && s[2] > s[0] && s[1] > s[0])
 	{
 		sa();
 		rra();
 	}
-	else if (stack[2] < stack[1] && stack[2] < stack[0] && stack[1] > stack[0])
+	else if (s[2] < s[1] && s[2] < s[0] && s[1] > s[0])
 	{
 		sa();
 		ra();
 	}
-	else if (stack[2] > stack[1] && stack[2] > stack[0] && stack[1] < stack[0])
+	else if (s[2] > s[1] && s[2] > s[0] && s[1] < s[0])
 		ra();
-	else if (stack[2] < stack[1] && stack[2] > stack[0] && stack[1] > stack[0])
+	else if (s[2] < s[1] && s[2] > s[0] && s[1] > s[0])
 		rra();
 }
 
