@@ -44,6 +44,23 @@ void			three_sort(void)
 		rra();
 }
 
+void			five_sort(void)
+{
+	int			*s_a;
+	int			*s_b;
+	int			top_a;
+	int			top_b;
+
+	s_a = get_stack()->stack_a;
+	s_b = get_stack()->stack_b;
+	pb();
+	pb();
+	top_a = get_stack()->top_index_a;
+	top_b = get_stack()->top_index_b;
+	three_sort();
+	two_sort();
+}
+
 void			sort_stack(void)
 {
 	unsigned	size;
