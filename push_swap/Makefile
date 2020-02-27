@@ -6,7 +6,7 @@
 #    By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/20 11:39:15 by amalsago          #+#    #+#              #
-#    Updated: 2020/02/24 19:07:28 by amalsago         ###   ########.fr        #
+#    Updated: 2020/02/27 10:22:05 by amalsago         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,6 +47,9 @@ INCDIR      = ./includes
 # List of source files
 
 SRCNAME     = errors.c\
+              two_sort.c\
+              three_sort.c\
+              four_sort.c\
               main.c\
               operations.c\
               parse_args.c\
