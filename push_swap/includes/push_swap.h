@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 11:58:13 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/24 18:17:33 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/02/27 10:16:06 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # include "get_next_line.h"
 # include "system_libraries.h"
 
-void		check_sort(void); //REMOVE
+int check_sort(void); //REMOVE
 
 /*
 ** STACKS
@@ -68,7 +68,12 @@ void		rra(void);
 void		rrb(void);
 void		rrr(void);
 
-
+/*
+** SORTING
+*/
+void		two_sort(int *s_a);
+void		three_sort(int *s_a);
+void		four_sort(int *s_a, int *s_b);
 
 /*
 ** TOOLS
