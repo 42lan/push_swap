@@ -6,7 +6,7 @@
 #    By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/20 11:39:15 by amalsago          #+#    #+#              #
-#    Updated: 2020/02/27 10:40:08 by amalsago         ###   ########.fr        #
+#    Updated: 2020/02/27 10:48:38 by amalsago         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,6 +56,7 @@ SRCNAME     = errors.c\
               parse_args.c\
               push.c\
               reverse_rotate.c\
+              repeat_op.c\
               rotate.c\
               sort_stack.c\
               stack.c\
