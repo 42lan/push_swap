@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 11:58:13 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/27 10:42:57 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/02/27 12:52:58 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ void		repeat_op(void (*op)(), int times);
 void		two_sort(int *s_a);
 void		three_sort(int *s_a);
 void		four_sort(int *s_a, int *s_b);
+void		five_sort(int *s_a, int *s_b);
 
 /*
 ** TOOLS
