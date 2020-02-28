@@ -6,12 +6,45 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 12:39:08 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/27 10:48:02 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/02/27 22:45:17 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+int				get_min_value(int *stack_a, int size)
+{
+	int			i;
+	int			min;
+
+	i = 0;
+	min = stack_a[0];
+	while (++i < size)
+		if (stack_a[i] < min)
+			min = stack_a[i];
+	return (min);
+}
+
+int				get_max_value(int *stack_a, int size)
+{
+	int			i;
+	int			max;
+
+	i = 0;
+	max = stack_a[0];
+	while (++i < size)
+		if (stack_a[i] > max)
+			max = stack_a[i];
+	return (max);
+}
+
+void			insertion_sort(int *stack_a, int size)
+{
+	(void)stack_a;
+	if (size < 2)
+		return ;
+
+}
 
 void			sort_stack(void)
 {
@@ -29,5 +62,6 @@ void			sort_stack(void)
 	else if (size == 4)
 		four_sort(s_a, s_b);
 	else if (size == 5)
-		five_sort(s_a, s_b);
+		insertion_sort(s_a, size - 1);
+	//five_sort(s_a, s_b);
 }
