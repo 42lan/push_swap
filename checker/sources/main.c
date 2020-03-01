@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.c                                          :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 11:52:46 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/24 10:20:52 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/01 18:14:43 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int			main(int ac, char **av)
 	initialize_stack(av);
 	//print_stacks_state();
 	moves = read_and_execute();
-	check_sort();
-	print_sorted(moves);
+	if (check_sort(PRINT_KOOK) == 1)
+		print_sorted(moves);
 	return (0);
 }
