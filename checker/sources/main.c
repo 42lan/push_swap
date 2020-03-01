@@ -27,7 +27,7 @@ static int	read_and_execute(void)
 	{
 		if (valid_operation(line))
 		{
-			execute_operation(line);
+			execute_operation(line, PRINT_OP_OFF);
 			++moves;
 		}
 		else

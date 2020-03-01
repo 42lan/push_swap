@@ -6,9 +6,10 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 17:03:15 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/27 13:15:53 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/01 18:07:33 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef CHECKER_H
 # define CHECKER_H
@@ -18,52 +19,75 @@
 # include "get_next_line.h"
 # include "system_libraries.h"
 
+# define PRINT_OP_OFF 0
+# define PRINT_OP_ON 1
+# define PRINT_KOOK 1
+
 /*
-** STACKS
+** t_stack
 **
-** top_index_a - is the top element of stack_a
-** top_index_b - is the top element of stack_b
+** stack()->a - stack A
+** stack()->b - stack B
+** stack()->tia - is the index of top element of stack A
+** stack()->tib - is the index of top element of stack B
+** stack()->imin[0|1] - is the index of minimal element of stack A|B
+** stack()->imax[0|1] - is the index of maximal element of stack A|B
 */
 
 typedef struct	s_stack
 {
-	int			*stack_a;
-	int			*stack_b;
-	int			top_index_a;
-	int			top_index_b;
+	int			*a;
+	int			*b;
+	int			tia;
+	int			tib;
+	int			imax[2];
+	int			imin[2];
 }				t_stack;
 
+t_stack			*stack(void);
 void			initialize_stack(char **av);
-t_stack			*get_stack(void);
+
+int				get_imin(int *stack, int size);
+int				get_imax(int *stack, int size);
 
 /*
 ** PARSING
 */
 
 void			parse_args(int ac, char ***av);
-void			check_ints(char **av);
-void			check_dups(char **av);
-void			check_lims(char **av);
+int				check_ints(char **av);
+int				check_dups(char **av);
+int				check_lims(char **av);
 
 /*
 ** OPERATIONS
 */
 
 int			valid_operation(char *op);
-void		execute_operation(char *op);
-void		pa(void);
-void		pb(void);
-void		sa(void);
-void		sb(void);
-void		ss(void);
-void		ra(void);
-void		rb(void);
-void		rr(void);
-void		rra(void);
-void		rrb(void);
-void		rrr(void);
+void		execute_operation(char *op, int print_op);
+void		pa(int print_op);
+void		pb(int print_op);
+void		sa(int print_op);
+void		sb(int print_op);
+void		ss(int print_op);
+void		ra(int print_op);
+void		rb(int print_op);
+void		rr(int print_op);
+void		rra(int print_op);
+void		rrb(int print_op);
+void		rrr(int print_op);
 
-void		check_sort(void);
+/*
+** SORTING
+*/
+
+void		sort_stack(void);
+int			check_sort(int print_kook);
+void		repeat_op(void (*op)(int), int print_op, int n);
+void		two_sort(void);
+void		three_sort(int *stack_a);
+void		four_sort(int *stack_a, int *stack_b);
+void		five_sort(void);
 
 /*
 ** TOOLS

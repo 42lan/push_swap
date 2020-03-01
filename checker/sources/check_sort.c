@@ -6,32 +6,33 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/23 14:24:36 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/24 13:50:45 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/01 18:04:33 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
-void		check_sort(void)
+int			check_sort(int print_kook)
 {
 	int		i;
 	int		min;
 
-	if (get_stack()->top_index_b != -1)
+	if (stack()->tib != -1)
 	{
-		ft_printf("Stack B isn't empty\n");// REMOVE
-		ft_perror_exit("KO");
+		(print_kook == 1) ? ft_putendl("KO") : 0;
+		return (0);
 	}
-	i = get_stack()->top_index_a;
-	min = get_stack()->stack_a[i];
+	i = stack()->tia;
+	min = stack()->a[i];
 	while (--i >= 0)
 	{
-		if (get_stack()->stack_a[i] < min)
+		if (stack()->a[i] < min)
 		{
-			ft_printf("Stack A isn't sorted\n");// REMOVE
-			ft_perror_exit("KO");
+			(print_kook == 1) ? ft_putendl("KO") : 0;
+			return (0);
 		}
-		min = get_stack()->stack_a[i];
+		min = stack()->a[i];
 	}
-	ft_putendl("OK");
+	(print_kook == 1) ? ft_putendl("OK") : 0;
+	return (1);
 }

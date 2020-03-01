@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 14:53:13 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/23 14:05:53 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/01 17:45:46 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,18 +29,21 @@ static void		rotate_down(int *stack, int top_index)
 	stack[top_index] = low;
 }
 
-void	rra(void)
+void	rra(int print_op)
 {
-	rotate_down(get_stack()->stack_a, get_stack()->top_index_a);
+	rotate_down(stack()->a, stack()->tia);
+	(print_op == 1) ? ft_printf("rra\n") : 0;
 }
 
-void	rrb(void)
+void	rrb(int print_op)
 {
-	rotate_down(get_stack()->stack_b, get_stack()->top_index_b);
+	rotate_down(stack()->b, stack()->tib);
+	(print_op == 1) ? ft_printf("rrb\n") : 0;
 }
 
-void	rrr(void)
+void	rrr(int print_op)
 {
-	rra();
-	rrb();
+	rra(print_op);
+	rrb(print_op);
+	(print_op == 1) ? ft_printf("rrr\n") : 0;
 }

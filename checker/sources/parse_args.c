@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 12:02:03 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/22 13:58:24 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/01 17:45:40 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,7 @@ static char		**prepare_args(char **av)
 
 void			parse_args(int ac, char ***p_av)
 {
-	char		**av;
-
 	(ac == 2) ? *p_av = prepare_args(*p_av) : 0;
-	av = *p_av;
-	check_ints(av);
-	check_dups(av);
-	check_lims(av);
+	if (check_ints(*p_av) || check_dups(*p_av) || check_lims(*p_av))
+		ft_perror_exit("Error");
 }
