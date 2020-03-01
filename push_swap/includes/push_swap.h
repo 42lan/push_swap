@@ -43,8 +43,8 @@ typedef struct	s_stack
 	int			imin[2];
 }				t_stack;
 
+t_stack			*stack(void);
 void			initialize_stack(char **av);
-t_stack			*get_stack(void);
 
 void			sort_stack(void);
 
