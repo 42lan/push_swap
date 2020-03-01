@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 13:57:15 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/27 13:15:04 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/01 16:54:10 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@ int			valid_operation(char *op)
 	if (ft_strequ(op, "pa") || ft_strequ(op, "pb")
 		|| ft_strequ(op, "sa") || ft_strequ(op, "sb") || ft_strequ(op, "ss")
 		|| ft_strequ(op, "ra") || ft_strequ(op, "rb") ||  ft_strequ(op, "rr")
-		|| ft_strequ(op, "rra") || ft_strequ(op, "rrb") || ft_strequ(op, "rrr")
-		|| ft_strequ(op, "pa") || ft_strequ(op, "pb"))
+		|| ft_strequ(op, "rra") || ft_strequ(op, "rrb") || ft_strequ(op, "rrr"))
 			return (1);
 	return (0);
 }
