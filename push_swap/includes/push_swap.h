@@ -19,7 +19,8 @@
 # include "get_next_line.h"
 # include "system_libraries.h"
 
-int check_sort(void); //REMOVE
+# define PRINT_OP_OFF 0
+# define PRINT_OP_ON 1
 
 /*
 ** STACKS
