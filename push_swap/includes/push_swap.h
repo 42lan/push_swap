@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 11:58:13 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/27 12:52:58 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/01 16:51:48 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,18 +23,24 @@
 # define PRINT_OP_ON 1
 
 /*
-** STACKS
+** t_stack
 **
-** top_index_a - is the top element of stack_a
-** top_index_b - is the top element of stack_b
+** stack()->a - stack A
+** stack()->b - stack B
+** stack()->tia - is the index of top element of stack A
+** stack()->tib - is the index of top element of stack B
+** stack()->imin[0|1] - is the index of minimal element of stack A|B
+** stack()->imax[0|1] - is the index of maximal element of stack A|B
 */
 
 typedef struct	s_stack
 {
-	int			*stack_a;
-	int			*stack_b;
-	int			top_index_a;
-	int			top_index_b;
+	int			*a;
+	int			*b;
+	int			tia;
+	int			tib;
+	int			imax[2];
+	int			imin[2];
 }				t_stack;
 
 void			initialize_stack(char **av);
