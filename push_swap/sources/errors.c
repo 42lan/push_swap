@@ -6,11 +6,37 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 21:13:28 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/24 18:16:12 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/01 17:10:21 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+static int		is_present(int number, char **av)
+{
+	int			i;
+
+	i = -1;
+	while (av[++i])
+		if (number == ft_atoi(av[i]))
+			return (1);
+	return (0);
+}
+
+int				check_dups(char **av)
+{
+	int			i;
+	int			number;
+
+	i = -1;
+	while (av[++i])
+	{
+		number = ft_atoi(av[i]);
+		if (is_present(number, av + i + 1))
+			return (1);
+	}
+	return (0);
+}
 
 int				check_ints(char **av)
 {
@@ -33,32 +59,6 @@ int				check_ints(char **av)
 				return (1);
 			++j;
 		}
-	}
-	return (0);
-}
-
-static int				is_present(int number, char **av)
-{
-	int			i;
-
-	i = -1;
-	while (av[++i])
-		if (number == ft_atoi(av[i]))
-			return (1);
-	return (0);
-}
-
-int				check_dups(char **av)
-{
-	int			i;
-	int			number;
-
-	i = -1;
-	while (av[++i])
-	{
-		number = ft_atoi(av[i]);
-		if (is_present(number, av + i + 1))
-			return (1);
 	}
 	return (0);
 }

@@ -6,14 +6,14 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 10:21:17 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/27 10:21:36 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/01 16:42:43 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	two_sort(int *s_a)
+void	two_sort(void)
 {
-	if (s_a[1] > s_a[0])
-		sa();
+	if (stack()->a[1] > stack()->a[0])
+		sa(PRINT_OP_ON);
 }

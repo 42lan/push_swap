@@ -6,32 +6,26 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/23 14:24:36 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/24 18:16:03 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/01 13:09:27 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void		check_sort(void)
+int			check_sort(void)
 {
 	int		i;
 	int		min;
 
-	if (get_stack()->top_index_b != -1)
-	{
-		ft_printf("Stack B isn't empty\n");// REMOVE
-		ft_perror_exit("KO");
-	}
-	i = get_stack()->top_index_a;
-	min = get_stack()->stack_a[i];
+	if (stack()->tib != -1)
+		return (0);
+	i = stack()->tia;
+	min = stack()->a[i];
 	while (--i >= 0)
 	{
-		if (get_stack()->stack_a[i] < min)
-		{
-			ft_printf("Stack A isn't sorted\n");// REMOVE
-			ft_perror_exit("KO");
-		}
-		min = get_stack()->stack_a[i];
+		if (stack()->a[i] < min)
+			return (0);
+		min = stack()->a[i];
 	}
-	ft_putendl("OK");
+	return (1);
 }

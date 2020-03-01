@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 13:58:16 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/24 18:16:54 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/01 15:59:16 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ void	print_stack(char stack_name, int *stack, int top_index)
 
 void	print_stacks_state(void)
 {
-	print_stack('A', get_stack()->stack_a, get_stack()->top_index_a);
-	print_stack('B', get_stack()->stack_b, get_stack()->top_index_b);
+	print_stack('A', stack()->a, stack()->tia);
+	print_stack('B', stack()->b, stack()->tib);
 }
 
 void	print_sorted(int moves)

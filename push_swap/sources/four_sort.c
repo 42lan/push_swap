@@ -6,32 +6,32 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 10:12:34 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/27 10:44:33 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/01 16:52:33 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void			four_sort(int *s_a, int *s_b)
+void		four_sort(int *a, int *b)
 {
-	int			i;
+	int		n;
 
-	i = 0;
-	pb();
-	three_sort(s_a);
-	if (s_b[0] > s_a[2])
+	n = 0;
+	pb(PRINT_OP_ON);
+	three_sort(a);
+	if (b[0] > a[2])
 	{
-		if (s_b[0] > s_a[0])
+		if (b[0] > a[0])
 		{
-			pa();
-			ra();
+			pa(PRINT_OP_ON);
+			ra(PRINT_OP_ON);
 			return ;
 		}
-		while (s_b[0] > s_a[2] && ++i)
-			ra();
-		pa();
-		repeat_op(rra, i);
+		while (b[0] > a[2] && ++n)
+			ra(PRINT_OP_ON);
+		pa(PRINT_OP_ON);
+		repeat_op(rra, PRINT_OP_ON, n);
 	}
 	else
-		pa();
+		pa(PRINT_OP_ON);
 }

@@ -6,14 +6,14 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 10:48:08 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/27 10:48:23 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/01 16:44:18 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	repeat_op(void (*op)(), int times)
+void	repeat_op(void (*op)(int), int print_op, int n)
 {
-	while (times-- > 0)
-		op();
+	while (n-- > 0)
+		op(print_op);
 }
