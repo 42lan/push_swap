@@ -63,18 +63,18 @@ int				check_lims(char **av);
 */
 
 int			valid_operation(char *op);
-void		execute_operation(char *op);
-void		pa(void);
-void		pb(void);
-void		sa(void);
-void		sb(void);
-void		ss(void);
-void		ra(void);
-void		rb(void);
-void		rr(void);
-void		rra(void);
-void		rrb(void);
-void		rrr(void);
+void		execute_operation(char *op, int print_op);
+void		pa(int print_op);
+void		pb(int print_op);
+void		sa(int print_op);
+void		sb(int print_op);
+void		ss(int print_op);
+void		ra(int print_op);
+void		rb(int print_op);
+void		rr(int print_op);
+void		rra(int print_op);
+void		rrb(int print_op);
+void		rrr(int print_op);
 
 /*
 ** SORTING
