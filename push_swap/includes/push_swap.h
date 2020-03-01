@@ -46,7 +46,8 @@ typedef struct	s_stack
 t_stack			*stack(void);
 void			initialize_stack(char **av);
 
-void			sort_stack(void);
+int				get_imin(int *stack, int size);
+int				get_imax(int *stack, int size);
 
 /*
 ** PARSING
