@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 11:58:13 by amalsago          #+#    #+#             */
-/*   Updated: 2020/03/01 18:22:19 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/01 19:22:43 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,10 +83,11 @@ void		rrr(int print_op);
 void		sort_stack(void);
 int			check_sort(void);
 void		repeat_op(void (*op)(int), int print_op, int n);
-void		two_sort(void);
-void		three_sort(int *a);
-void		four_sort(int *a, int *b);
-void		five_sort(void);
+
+void		sort2(int *a);
+void		sort3(int *a);
+void		sort4(t_stack *stack);
+void		sort5(t_stack *stack);
 
 /*
 ** TOOLS
