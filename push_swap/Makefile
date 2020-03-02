@@ -6,7 +6,7 @@
 #    By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/20 11:39:15 by amalsago          #+#    #+#              #
-#    Updated: 2020/03/01 12:05:41 by amalsago         ###   ########.fr        #
+#    Updated: 2020/03/02 17:03:37 by amalsago         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ LIBNAME     = libft.a
 # GNU Compiler Collection
 
 GCC         = gcc
-WOPT        = -Wall -Wextra -Werror
+WOPT        = -Wall -Wextra -Werror -g -g3
 OOPT        = -O3
 IOPT        = -I $(INCDIR) -I $(LIBDIR)/$(INCDIR)
 
@@ -48,10 +48,10 @@ INCDIR      = ./includes
 
 SRCNAME     = errors.c\
               get_index.c\
-              two_sort.c\
-              three_sort.c\
-              four_sort.c\
-              five_sort.c\
+              sort2.c\
+              sort3.c\
+              sort4.c\
+              sort5.c\
               main.c\
               operations.c\
               parse_args.c\
