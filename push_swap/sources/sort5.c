@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 10:33:21 by amalsago          #+#    #+#             */
-/*   Updated: 2020/03/02 21:43:31 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/02 22:26:22 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,12 @@ static int		median5(t_stack *stack)
 
 void			sort5(t_stack *stack)
 {
-	int			i;
 	int			median;
 
-	i = -1;
 	median = median5(stack);
 	while (stack->tia > 2)
-		(stack->a[stack->tia] > median) ? pb(PRINT_OP_ON) : ra(PRINT_OP_ON);
+		(stack->a[stack->tia] < median) ? pb(PRINT_OP_ON) : ra(PRINT_OP_ON);
 	sort3(stack->a);
 	repeat_op(pa, PRINT_OP_ON, 2);
-	repeat_op(ra, PRINT_OP_ON, 2);
+	(stack->a[stack->tia] > stack->a[stack->tia - 1]) ? sa(PRINT_OP_ON) : 0;
 }
