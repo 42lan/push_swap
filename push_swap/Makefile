@@ -6,7 +6,7 @@
 #    By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/20 11:39:15 by amalsago          #+#    #+#              #
-#    Updated: 2020/03/02 17:03:37 by amalsago         ###   ########.fr        #
+#    Updated: 2020/03/03 20:15:22 by amalsago         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,6 +53,7 @@ SRCNAME     = errors.c\
               sort4.c\
               sort5.c\
               main.c\
+              qsort_ps.c\
               operations.c\
               parse_args.c\
               push.c\

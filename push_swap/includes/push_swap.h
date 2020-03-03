@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 11:58:13 by amalsago          #+#    #+#             */
-/*   Updated: 2020/03/01 19:22:43 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/03 20:08:51 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,7 @@ void		sort2(int *a);
 void		sort3(int *a);
 void		sort4(t_stack *stack);
 void		sort5(t_stack *stack);
+void		qsort_ps(t_stack *stack);
 
 /*
 ** TOOLS
