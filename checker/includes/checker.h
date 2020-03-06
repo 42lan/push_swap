@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 17:03:15 by amalsago          #+#    #+#             */
-/*   Updated: 2020/03/01 18:07:33 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/05 14:36:24 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,6 @@
 ** stack()->b - stack B
 ** stack()->tia - is the index of top element of stack A
 ** stack()->tib - is the index of top element of stack B
-** stack()->imin[0|1] - is the index of minimal element of stack A|B
-** stack()->imax[0|1] - is the index of maximal element of stack A|B
 */
 
 typedef struct	s_stack
@@ -40,8 +38,6 @@ typedef struct	s_stack
 	int			*b;
 	int			tia;
 	int			tib;
-	int			imax[2];
-	int			imin[2];
 }				t_stack;
 
 t_stack			*stack(void);
