@@ -38,6 +38,18 @@ static int		median_qs(int *a, int size)
 	return (median);
 }
 
+static void		sort(t_stack *stack)
+{
+	int			imax;
+
+	while (stack->tib >= 0)
+	{
+		imax = get_imax(stack->b, stack->tib + 1);
+		fast_rotate_b(stack, stack->b[imax], imax);
+		pa(PRINT_OP_ON);
+	}
+}
+
 static void		partition(t_stack *stack)
 {
 	int			size;
