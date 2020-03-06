@@ -52,23 +52,25 @@ static void		sort(t_stack *stack)
 
 static void		partition(t_stack *stack)
 {
-	int			size;
+	int			i;
 	int			median;
 
-	if (check_sort() == 1 || stack->tia <= 0)
-		return ;
-	size = stack->tia + 1;
-	median = qs_median(stack->a, size) - 1;
-	while (--size > 0)
+	if (stack->tia <= 4)
 	{
-		if (stack->a[stack->tia] <= median)
-		{
-			pb(PRINT_OP_ON);
-			size = stack->tia + 1;
-		}
-		else
-			ra(PRINT_OP_ON);
+		small_sort(stack);
+		return ;
 	}
+	else if (check_sort() == 1 || stack->tia <= 0)
+		return ;
+	i = stack->tia + 1;
+	median = median_qs(stack->a, i);
+	while (--i >= 0)
+		if (stack->a[i] <= median)
+		{
+			fast_rotate_a(stack, stack->a[i], i);
+			pb(PRINT_OP_ON);
+			i = stack->tia + 1;
+		}
 	partition(stack);
 }
 
