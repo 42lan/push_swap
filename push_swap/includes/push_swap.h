@@ -42,9 +42,6 @@ typedef struct	s_stack
 t_stack			*stack(void);
 void			initialize_stack(char **av);
 
-int				get_imin(int *stack, int size);
-int				get_imax(int *stack, int size);
-
 /*
 ** PARSING
 */
@@ -58,41 +55,45 @@ int				check_lims(char **av);
 ** OPERATIONS
 */
 
-int			valid_operation(char *op);
-void		execute_operation(char *op, int print_op);
-void		pa(int print_op);
-void		pb(int print_op);
-void		sa(int print_op);
-void		sb(int print_op);
-void		ss(int print_op);
-void		ra(int print_op);
-void		rb(int print_op);
-void		rr(int print_op);
-void		rra(int print_op);
-void		rrb(int print_op);
-void		rrr(int print_op);
+int				valid_operation(char *op);
+void			execute_operation(char *op, int print_op);
+void			pa(int print_op);
+void			pb(int print_op);
+void			sa(int print_op);
+void			sb(int print_op);
+void			ss(int print_op);
+void			ra(int print_op);
+void			rb(int print_op);
+void			rr(int print_op);
+void			rra(int print_op);
+void			rrb(int print_op);
+void			rrr(int print_op);
 
 /*
 ** SORTING
 */
 
-void		sort_stack(void);
-int			check_sort(void);
-void		repeat_op(void (*op)(int), int print_op, int n);
-
-void		sort2(int *a);
-void		sort3(int *a);
-void		sort4(t_stack *stack);
-void		sort5(t_stack *stack);
-void		qsort_ps(t_stack *stack);
+void			sort_stack(void);
+int				check_sort(void);
+void			qsort_ps(t_stack *stack);
+void			small_sort(t_stack *stack);
+void			sort2(int *a);
+void			sort3(int *a);
+void			sort4(t_stack *stack);
+void			sort5(t_stack *stack);
 
 /*
 ** TOOLS
 */
 
-void	print_stack(char stack_name, int *stack, int size);
-void	print_stacks_state(void);
-void	print_sorted(int moves);
+int				get_imin(int *stack, int size);
+int				get_imax(int *stack, int size);
+void			repeat_op(void (*op)(int), int print_op, int n);
+void			fast_rotate_a(t_stack *stack, int value, int position);
+void			fast_rotate_b(t_stack *stack, int value, int position);
+void			print_stack(char stack_name, int *stack, int size);
+void			print_stacks_state(void);
+void			print_sorted(int moves);
 
 /*
 ** PUSH_SWAP_H
