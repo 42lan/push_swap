@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   qsort.c                                            :+:      :+:    :+:   */
+/*   qsort_ps.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 19:57:13 by amalsago          #+#    #+#             */
-/*   Updated: 2020/03/03 20:08:41 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/05 22:48:56 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void		fast_rotate(t_stack *stack, int imax, int value, int middle)
+int		adapted_div(int size)
 {
-	if (imax >= middle)
-		while (stack->b[stack->tib] != value)
-			rb(PRINT_OP_ON);
+	if (size == 9 || size == 10)
+		return (3);
+	if (size == 100)
+		return (5);
+	else if (size == 500)
+		return (8);
 	else
-		while (stack->b[stack->tib] != value)
-			rrb(PRINT_OP_ON);
+		return (2);
 }
 
 static void		sort(t_stack *stack)
