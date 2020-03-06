@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 12:02:03 by amalsago          #+#    #+#             */
-/*   Updated: 2020/02/24 18:16:23 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/05 14:24:54 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,7 @@ static char		**prepare_args(char **av)
 
 	new_av = ft_strsplit_spaces(*av);
 	if (!*new_av)
-	{
-		ft_printf("Argument is empty");// REMOVE
 		exit(EXIT_FAILURE);
-	}
 	return (new_av);
 }
 
