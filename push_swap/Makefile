@@ -6,7 +6,7 @@
 #    By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/20 11:39:15 by amalsago          #+#    #+#              #
-#    Updated: 2020/03/03 20:15:22 by amalsago         ###   ########.fr        #
+#    Updated: 2020/03/05 14:32:46 by amalsago         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,11 +47,9 @@ INCDIR      = ./includes
 # List of source files
 
 SRCNAME     = errors.c\
+              fast_rotate.c\
               get_index.c\
-              sort2.c\
-              sort3.c\
-              sort4.c\
-              sort5.c\
+              small_sort.c\
               main.c\
               qsort_ps.c\
               operations.c\
