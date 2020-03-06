@@ -24,33 +24,16 @@ int		adapted_div(int size)
 		return (2);
 }
 
-static void		sort(t_stack *stack)
-{
-	int			imax;
-	int			size_b;
-	int			middle;
-
-	size_b = stack->tib + 1;
-	while (size_b > 0)
-	{
-		middle = (size_b / 2) + (size_b % 2);
-		imax = get_imax(stack->b, size_b);
-		fast_rotate(stack, imax, stack->b[imax], middle);
-		pa(PRINT_OP_ON);
-		size_b = stack->tib + 1;
-	}
-}
-
-static int		qs_median(int *a, int size)
+static int		median_qs(int *a, int size)
 {
 	int			*tmp;
 	int			median;
 
 	if (!(tmp = (int *)ft_memalloc(sizeof(int) * size)))
-		ft_perror_exit("ft_memalloc() failed in median()");
+		exit(EXIT_FAILURE);
 	ft_memcpy(tmp, a, sizeof(int) * size);
 	ft_qsort_int(tmp, 0, size - 1);
-	median = tmp[((size >> 1) + (size >> 2))];
+	median = tmp[size / adapted_div(size)];
 	free(tmp);
 	return (median);
 }
