@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 11:58:13 by amalsago          #+#    #+#             */
-/*   Updated: 2020/03/08 00:08:59 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/08 09:13:08 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 # ifndef ERROR_MANAGEMENT
 #  define ERROR_MANAGEMENT 0
-# endif 
+# endif
 
 # define PRINT_STATUS_OFF 0
 # define PRINT_STATUS_ON 1
@@ -37,15 +37,6 @@
 # define ERR_NONINTEGER "One of the arguments isn't an integer"
 # define ERR_DUPLICATED "One of the integers is duplicated"
 # define ERR_INTOVERFLOW "One of the integers owerflows"
-
-/*
-** t_stack
-**
-** stack()->a - stack A
-** stack()->b - stack B
-** stack()->tia - is the index of top element of stack A
-** stack()->tib - is the index of top element of stack B
-*/
 
 typedef struct	s_stack
 {
