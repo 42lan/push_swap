@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/05 14:29:09 by amalsago          #+#    #+#             */
-/*   Updated: 2020/03/05 14:32:20 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/08 00:11:32 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,11 +68,15 @@ void		sort5(t_stack *stack)
 	int		median;
 
 	if (!(tmp = (int *)ft_memalloc(sizeof(int) * (stack->tia + 1))))
+	{
+		free_stack();
+		(ERROR_MANAGEMENT) ? ft_putendl(MALLOC_FAILURE) : 0;
 		exit(EXIT_FAILURE);
+	}
 	ft_memcpy(tmp, stack->a, sizeof(int) * (stack->tia + 1));
 	ft_qsort_int(tmp, 0, stack->tia);
 	median = tmp[2];
-	free(tmp);
+	ft_memdel((void **)&tmp);
 	while (stack->tia > 2)
 		(stack->a[stack->tia] < median) ? pb(PRINT_OP_ON) : ra(PRINT_OP_ON);
 	sort3(stack->a);
