@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 11:58:13 by amalsago          #+#    #+#             */
-/*   Updated: 2020/03/07 23:26:50 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/08 00:08:59 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ typedef struct	s_stack
 
 t_stack			*stack(void);
 void			initialize_stack(char **av);
-void			free_stack(t_stack *stack);
+void			free_stack(void);
 
 /*
 ** PARSING
