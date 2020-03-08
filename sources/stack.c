@@ -37,6 +37,7 @@ void				initialize_stack(char **av)
 	}
 	if(!(stack()->b = (int *)ft_memalloc(sizeof(int) * top_index)))
 	{
+		ft_memdel((void **)&stack()->a);
 		(ERROR_MANAGEMENT) ? ft_putendl(MALLOC_FAILURE) : 0;
 		exit(EXIT_FAILURE);
 	}
