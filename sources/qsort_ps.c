@@ -40,7 +40,7 @@ static int		median_qs(int *a, int size)
 	ft_memcpy(tmp, a, sizeof(int) * size);
 	ft_qsort_int(tmp, 0, size - 1);
 	median = tmp[size / adapted_div(size)];
-	free(tmp);
+	ft_memdel((void **)&tmp);
 	return (median);
 }
 
