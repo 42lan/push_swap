@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 19:57:13 by amalsago          #+#    #+#             */
-/*   Updated: 2020/03/07 16:13:14 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/08 00:24:55 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,9 @@ static int		median_qs(int *a, int size)
 		free_stack();
 		(ERROR_MANAGEMENT) ? ft_putendl(MALLOC_FAILURE) : 0;
 		exit(EXIT_FAILURE);
+	}
 	ft_memcpy(tmp, a, sizeof(int) * size);
 	ft_qsort_int(tmp, 0, size - 1);
-	//median = tmp[(int)(((size / adapted_div(size)) + (size % adapted_div(size))) * 0.9)];
 	median = tmp[size / adapted_div(size)];
 	free(tmp);
 	return (median);
