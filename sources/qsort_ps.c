@@ -61,13 +61,8 @@ static void		partition(t_stack *stack)
 	int			i;
 	int			median;
 
-	/*
 	if (stack->tia <= 4)
-	{
 		small_sort(stack);
-		return ;
-	}
-	else */
 	if (is_sorted(PRINT_STATUS_OFF) == 1 || stack->tia <= 0)
 		return ;
 	i = stack->tia + 1;
