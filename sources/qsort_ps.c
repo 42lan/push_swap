@@ -32,6 +32,9 @@ static int		median_qs(int *a, int size)
 	int			median;
 
 	if (!(tmp = (int *)ft_memalloc(sizeof(int) * size)))
+	{
+		free_stack();
+		(ERROR_MANAGEMENT) ? ft_putendl(MALLOC_FAILURE) : 0;
 		exit(EXIT_FAILURE);
 	ft_memcpy(tmp, a, sizeof(int) * size);
 	ft_qsort_int(tmp, 0, size - 1);

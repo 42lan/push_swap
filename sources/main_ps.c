@@ -23,10 +23,10 @@ int				main(int ac, char **av)
 
 	/*
 	int ret = (is_sorted(PRINT_STATUS_ON) == 1) ? 0 : 1;
-	free_stack(stack());
+	free_stack();
 	return (ret);
 	*/
 
-	free_stack(stack());
+	free_stack();
 	return (0);
 }

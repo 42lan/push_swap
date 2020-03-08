@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 11:52:46 by amalsago          #+#    #+#             */
-/*   Updated: 2020/03/07 23:22:40 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/08 00:12:46 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ static int	read_and_execute(void)
 		}
 		else
 		{
+			free_stack();
 			(ERROR_MANAGEMENT) ? ft_putendl(ERR_BADOPERATION) : 0;
 			ft_perror_exit("Error");
 		}
@@ -53,6 +54,6 @@ int			main(int ac, char **av)
 	initialize_stack(av);
 	read_and_execute();
 	ret = (is_sorted(PRINT_STATUS_ON) == 1) ? 0 : 1;
-	free_stack(stack());
+	free_stack();
 	return (ret);
 }

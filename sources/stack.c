@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 01:59:39 by amalsago          #+#    #+#             */
-/*   Updated: 2020/03/07 23:18:46 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/08 00:08:39 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,10 @@ t_stack				*stack(void)
 	return (&stack);
 }
 
-void				free_stack(t_stack *stack)
+void				free_stack(void)
 {
-	free(stack->a);
-	free(stack->b);
-	//exit(EXIT_SUCCESS);
+	ft_memdel((void **)&stack()->a);
+	ft_memdel((void **)&stack()->b);
 }
 
 void				initialize_stack(char **av)
