@@ -32,6 +32,8 @@ tags
 *.dylib
 
 # Executables
+checker
+push_swap
 *.exe
 *.out
 *.app
