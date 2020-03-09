@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 21:13:28 by amalsago          #+#    #+#             */
-/*   Updated: 2020/03/07 14:23:58 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/08 13:57:03 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ static int		is_present(int number, char **av)
 	i = -1;
 	while (av[++i])
 		if (number == ft_atoi(av[i]))
-			return (1);
-	return (0);
+			return (FAILURE);
+	return (SUCCESS);
 }
 
 int				check_dups(char **av)
@@ -35,10 +35,10 @@ int				check_dups(char **av)
 		if (is_present(number, av + i + 1))
 		{
 			(ERROR_MANAGEMENT == 1) ? ft_putendl(ERR_DUPLICATED) : 0;
-			return (1);
+			return (FAILURE);
 		}
 	}
-	return (0);
+	return (SUCCESS);
 }
 
 int				check_ints(char **av)
@@ -54,22 +54,19 @@ int				check_ints(char **av)
 		{
 			++j;
 			if (av[i][j] == '\0')
-			{
-				(ERROR_MANAGEMENT) ? ft_putendl(ERR_NONINTEGER) : 0;
-				return (1);
-			}
+				return (FAILURE);
 		}
 		while (av[i][j])
 		{
 			if (!ft_isdigit(av[i][j]))
 			{
 				(ERROR_MANAGEMENT) ? ft_putendl(ERR_NONINTEGER) : 0;
-				return (1);
+				return (FAILURE);
 			}
 			++j;
 		}
 	}
-	return (0);
+	return (SUCCESS);
 }
 
 int				check_lims(char **av)
@@ -84,8 +81,8 @@ int				check_lims(char **av)
 		if (number < INT_MIN || number > INT_MAX)
 		{
 			(ERROR_MANAGEMENT) ? ft_putendl(ERR_INTOVERFLOW) : 0;
-			return (1);
+			return (FAILURE);
 		}
 	}
-	return (0);
+	return (SUCCESS);
 }
