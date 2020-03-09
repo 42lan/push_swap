@@ -50,7 +50,7 @@ typedef struct	s_stack
 }				t_stack;
 
 t_stack			*stack(void);
-void			initialize_stack(char **av);
+int				initialize_stack(int ac, char **av);
 void			free_stack(void);
 
 /*
