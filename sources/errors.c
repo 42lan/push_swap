@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 21:13:28 by amalsago          #+#    #+#             */
-/*   Updated: 2020/03/08 13:57:03 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/09 15:40:43 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,13 @@ int				check_ints(char **av)
 	return (SUCCESS);
 }
 
+static int		is_overflow(char *str)
+{
+	if (ft_strlen(str) > 11)
+		return (FAILURE);
+	return (SUCCESS);
+}
+
 int				check_lims(char **av)
 {
 	int			i;
@@ -78,7 +85,7 @@ int				check_lims(char **av)
 	while (av[++i])
 	{
 		number = ft_atolli(av[i]);
-		if (number < INT_MIN || number > INT_MAX)
+		if (number < INT_MIN || number > INT_MAX || is_overflow(av[i]))
 		{
 			(ERROR_MANAGEMENT) ? ft_putendl(ERR_INTOVERFLOW) : 0;
 			return (FAILURE);
