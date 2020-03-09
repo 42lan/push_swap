@@ -6,7 +6,7 @@
 #    By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/20 11:39:15 by amalsago          #+#    #+#              #
-#    Updated: 2020/03/07 18:24:05 by amalsago         ###   ########.fr        #
+#    Updated: 2020/03/09 08:23:31 by amalsago         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ LIBNAME     = libft.a
 # GNU Compiler Collection
 
 GCC         = gcc
-WOPT        = -Wall -Wextra -Werror -g -g3#-fsanitize=address
+WOPT        = -Wall -Wextra -Werror# -g3 -fsanitize=address
 OOPT        = -O2
 IOPT        = -I $(INCDIR) -I $(LIBDIR)/$(INCDIR)
 
