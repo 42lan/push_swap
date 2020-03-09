@@ -6,7 +6,7 @@
 #    By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/20 11:39:15 by amalsago          #+#    #+#              #
-#    Updated: 2020/03/09 08:23:31 by amalsago         ###   ########.fr        #
+#    Updated: 2020/03/09 12:07:03 by amalsago         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,6 @@ IOPT        = -I $(INCDIR) -I $(LIBDIR)/$(INCDIR)
 # System commands
 
 AR          = ar -rc
-LESS        = less
 MAKE        = make -sC
 RANLIB      = ranlib
 NORMINETTE  = /usr/bin/norminette
@@ -131,7 +130,7 @@ fclean: clean
 re: fclean all
 
 norm:
-	@$(NORMINETTE) $(SRCDIR) $(INCDIR) $(LIBDIR)/sources | $(LESS)
+	@$(NORMINETTE) $(SRCDIR) $(INCDIR) $(LIBDIR)/sources $(LIBDIR)/includes
 
 .PHONY: all clean fclean re norm
 
