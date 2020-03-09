@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 11:52:46 by amalsago          #+#    #+#             */
-/*   Updated: 2020/03/09 12:03:38 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/09 14:37:03 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,6 @@ int		main(int ac, char **av)
 		exit(EXIT_FAILURE);
 	sort_stack();
 	free_stack();
+	(ac == 1) ? ft_memdel((void **)&av) : 0;
 	return (SUCCESS);
 }
