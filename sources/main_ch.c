@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 11:52:46 by amalsago          #+#    #+#             */
-/*   Updated: 2020/03/08 00:12:46 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/09 08:17:48 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,43 +17,39 @@
 ** cause exit with failure code error.
 */
 
-static int	read_and_execute(void)
+static void		read_and_execute(void)
 {
-	int		moves;
-	char	*line;
+	char		*line;
 
-	moves = 0;
 	while (get_next_line(0, &line) > 0)
 	{
-		if (is_valid_operation(line))
-		{
+		if (is_valid_operation(line) == SUCCESS)
 			execute_operation(line, PRINT_OP_OFF);
-			++moves;
-		}
 		else
 		{
 			free_stack();
 			(ERROR_MANAGEMENT) ? ft_putendl(ERR_BADOPERATION) : 0;
-			ft_perror_exit("Error");
+			ft_perror_exit(SGR_FG_RED"Error"SGR_NORMAL);
 		}
 		ft_strdel(&line);
 	}
-	return (moves);
 }
 
-int			main(int ac, char **av)
+int				main(int ac, char **av)
 {
-	int		ret;
+	int			ret;
 
-	if (ac < 2 || !**(++av))
+	if ((--ac) == 0 || !**(++av))
 	{
 		(ERROR_MANAGEMENT) ? ft_putendl(NO_ARGUMENTS) : 0;
 		exit(EXIT_FAILURE);
 	}
 	parse_args(ac, &av);
-	initialize_stack(av);
+	if (initialize_stack(ac, av) == FAILURE)
+		exit(EXIT_FAILURE);
 	read_and_execute();
-	ret = (is_sorted(PRINT_STATUS_ON) == 1) ? 0 : 1;
+	print_stacks_state();
+	ret = (is_sorted(PRINT_STATUS_ON) == SUCCESS) ? SUCCESS : FAILURE;
 	free_stack();
 	return (ret);
 }
