@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 11:58:13 by amalsago          #+#    #+#             */
-/*   Updated: 2020/03/08 09:13:08 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/08 17:30:16 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,32 @@
 # define PUSH_SWAP_H
 
 # include "libft.h"
+# include "colors.h"
 # include "ft_printf.h"
 # include "get_next_line.h"
 # include "system_libraries.h"
 
 # ifndef ERROR_MANAGEMENT
-#  define ERROR_MANAGEMENT 0
+#  define ERROR_MANAGEMENT	0
 # endif
 
-# define PRINT_STATUS_OFF 0
-# define PRINT_STATUS_ON 1
-# define PRINT_OP_OFF 0
-# define PRINT_OP_ON 1
+# define SUCCESS			0
+# define FAILURE			1
+# define PRINT_STATUS_OFF	0
+# define PRINT_STATUS_ON	1
+# define PRINT_OP_OFF		0
+# define PRINT_OP_ON		1
 
-# define NO_ARGUMENTS "No arguments are passed to program"
-# define STACK_A_EMPTY "The stack A is empty"
-# define STACK_B_EMPTY "The stack B is empty"
-# define STACK_UNSORTED "The stack A isn't sorted"
-# define CANT_SWAP "Swap operation cannot be performed (no or one element only)"
-# define MALLOC_FAILURE "The allocation of memory failed"
-# define ERR_BADOPERATION "The last operation is invalid"
-# define ERR_NONINTEGER "One of the arguments isn't an integer"
-# define ERR_DUPLICATED "One of the integers is duplicated"
-# define ERR_INTOVERFLOW "One of the integers owerflows"
+# define NO_ARGUMENTS		"No arguments are passed to program"
+# define STACK_A_EMPTY		"The stack A is empty"
+# define STACK_B_EMPTY		"The stack B is empty"
+# define STACK_UNSORTED		"The stack A isn't sorted"
+# define CANT_SWAP			"Swap operation cannot be performed"
+# define MALLOC_FAILURE		"The allocation of memory failed"
+# define ERR_BADOPERATION	"The last operation is invalid"
+# define ERR_NONINTEGER		"One of the arguments isn't an integer"
+# define ERR_DUPLICATED		"One of the integers is duplicated"
+# define ERR_INTOVERFLOW	"One of the integers owerflows"
 
 typedef struct	s_stack
 {
