@@ -6,10 +6,9 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 14:53:13 by amalsago          #+#    #+#             */
-/*   Updated: 2020/03/01 15:52:02 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/09 08:21:32 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "push_swap.h"
 
@@ -19,8 +18,8 @@
 
 static void		rotate_down(int *stack, int top_index)
 {
-	int		i;
-	int		low;
+	int			i;
+	int			low;
 
 	i = -1;
 	low = stack[0];
@@ -29,21 +28,21 @@ static void		rotate_down(int *stack, int top_index)
 	stack[top_index] = low;
 }
 
-void	rra(int print_op)
+void			rra(int print_op)
 {
 	rotate_down(stack()->a, stack()->tia);
-	(print_op == 1) ? ft_printf("rra\n") : 0;
+	(print_op == 1) ? ft_putendl("rra") : 0;
 }
 
-void	rrb(int print_op)
+void			rrb(int print_op)
 {
 	rotate_down(stack()->b, stack()->tib);
-	(print_op == 1) ? ft_printf("rrb\n") : 0;
+	(print_op == 1) ? ft_putendl("rrb") : 0;
 }
 
-void	rrr(int print_op)
+void			rrr(int print_op)
 {
 	rra(print_op);
 	rrb(print_op);
-	(print_op == 1) ? ft_printf("rrr\n") : 0;
+	(print_op == 1) ? ft_putendl("rrr") : 0;
 }
