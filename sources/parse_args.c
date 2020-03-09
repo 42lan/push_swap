@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 12:02:03 by amalsago          #+#    #+#             */
-/*   Updated: 2020/03/08 00:15:41 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/08 17:10:54 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@
 ** check_lims() verify that all arguments don't exceed the limits of int
 */
 
-
 static char		**prepare_args(char **av)
 {
 	char		**new_av;
@@ -38,10 +37,10 @@ static char		**prepare_args(char **av)
 
 void			parse_args(int ac, char ***p_av)
 {
-	(ac == 2) ? *p_av = prepare_args(*p_av) : 0;
+	(ac == 1) ? *p_av = prepare_args(*p_av) : 0;
 	if (check_ints(*p_av) || check_dups(*p_av) || check_lims(*p_av))
 	{
-		(ac == 2) ? ft_memdel((void **)*p_av) : 0;
-		ft_perror_exit("Error");
+		(ac == 1) ? ft_memdel((void **)*p_av) : 0;
+		ft_perror_exit(SGR_FG_RED"Error"SGR_NORMAL);
 	}
 }
