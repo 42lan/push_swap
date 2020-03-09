@@ -16,7 +16,7 @@ int		is_valid_operation(char *op)
 {
 	if (ft_strequ(op, "pa") || ft_strequ(op, "pb")
 		|| ft_strequ(op, "sa") || ft_strequ(op, "sb") || ft_strequ(op, "ss")
-		|| ft_strequ(op, "ra") || ft_strequ(op, "rb") ||  ft_strequ(op, "rr")
+		|| ft_strequ(op, "ra") || ft_strequ(op, "rb") || ft_strequ(op, "rr")
 		|| ft_strequ(op, "rra") || ft_strequ(op, "rrb") || ft_strequ(op, "rrr"))
 		return (SUCCESS);
 	return (FAILURE);
@@ -24,15 +24,15 @@ int		is_valid_operation(char *op)
 
 void	execute_operation(char *op, int print_op)
 {
-	ft_strequ(op, "pa") ? pa(print_op): 0;
-	ft_strequ(op, "pb") ? pb(print_op): 0;
-	ft_strequ(op, "sa") ? sa(print_op): 0;
-	ft_strequ(op, "sb") ? sb(print_op): 0;
-	ft_strequ(op, "ss") ? ss(print_op): 0;
-	ft_strequ(op, "ra") ? ra(print_op): 0;
-	ft_strequ(op, "rb") ? rb(print_op): 0;
-	ft_strequ(op, "rr") ? rr(print_op): 0;
-	ft_strequ(op, "rra") ? rra(print_op): 0;
-	ft_strequ(op, "rrb") ? rrb(print_op): 0;
-	ft_strequ(op, "rrr") ? rrr(print_op): 0;
+	ft_strequ(op, "pa") ? pa(print_op) : 0;
+	ft_strequ(op, "pb") ? pb(print_op) : 0;
+	ft_strequ(op, "sa") ? sa(print_op) : 0;
+	ft_strequ(op, "sb") ? sb(print_op) : 0;
+	ft_strequ(op, "ss") ? ss(print_op) : 0;
+	ft_strequ(op, "ra") ? ra(print_op) : 0;
+	ft_strequ(op, "rb") ? rb(print_op) : 0;
+	ft_strequ(op, "rr") ? rr(print_op) : 0;
+	ft_strequ(op, "rra") ? rra(print_op) : 0;
+	ft_strequ(op, "rrb") ? rrb(print_op) : 0;
+	ft_strequ(op, "rrr") ? rrr(print_op) : 0;
 }
