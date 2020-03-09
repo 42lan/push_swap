@@ -6,13 +6,13 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 19:57:13 by amalsago          #+#    #+#             */
-/*   Updated: 2020/03/09 08:32:33 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/09 13:41:52 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int		adapted_div(int size)
+int				adapted_div(int size)
 {
 	if (size == 1000)
 		return (10);
@@ -21,7 +21,7 @@ int		adapted_div(int size)
 	else if (size == 500)
 		return (7);
 	else if (size == 100)
-		return (4);
+		return (3);
 	else
 		return (2);
 }
