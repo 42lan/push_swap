@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 19:57:13 by amalsago          #+#    #+#             */
-/*   Updated: 2020/03/08 00:24:55 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/09 08:32:33 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ static void		partition(t_stack *stack)
 
 	if (stack->tia <= 4)
 		small_sort(stack);
-	if (is_sorted(PRINT_STATUS_OFF) == 1 || stack->tia <= 0)
+	if (is_sorted(PRINT_STATUS_OFF) == SUCCESS || stack->tia <= 0)
 		return ;
 	i = stack->tia + 1;
 	median = median_qs(stack->a, i);
