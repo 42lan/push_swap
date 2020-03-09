@@ -6,19 +6,19 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/05 14:29:09 by amalsago          #+#    #+#             */
-/*   Updated: 2020/03/08 00:11:32 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/08 09:21:34 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sort2(int *a)
+void		sort2(int *a)
 {
 	if (a[1] > a[0])
 		sa(PRINT_OP_ON);
 }
 
-void	sort3(int *a)
+void		sort3(int *a)
 {
 	if (a[2] > a[1] && a[2] < a[0] && a[1] < a[0])
 		sa(PRINT_OP_ON);
