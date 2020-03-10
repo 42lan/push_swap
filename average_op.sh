@@ -6,7 +6,7 @@
 #    By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/05 16:34:25 by amalsago          #+#    #+#              #
-#    Updated: 2020/03/10 14:35:13 by amalsago         ###   ########.fr        #
+#    Updated: 2020/03/10 14:39:32 by amalsago         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ do
 	while [ $I -lt $NTIMES ]; do
 		ARG=$(ruby -e "puts ($FROM..$TO).to_a.shuffle.join(' ')");
 		NOP=$($PUSH_SWAP $ARG | wc | awk '{ print $1 }');
-		if [ $NOP -gt $BEST ]; then
+		if [ $NOP -lt $BEST ]; then
 			BEST=$NOP
 		fi
 		if [ $NOP -gt $WORST ]; then
@@ -44,6 +44,6 @@ do
 	done
 	AVERAGE=$(expr $SUM / $NTIMES)
 	printf "av: %-5d | " $AVERAGE
-	printf "bc: %-5d | " $WORST
+	printf "bc: %-5d | " $BEST
 	printf "wc: %-5d\n" $WORST
 done
