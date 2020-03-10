@@ -6,7 +6,7 @@
 #    By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/05 16:34:25 by amalsago          #+#    #+#              #
-#    Updated: 2020/03/10 14:39:32 by amalsago         ###   ########.fr        #
+#    Updated: 2020/03/10 14:55:24 by amalsago         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,6 @@ declare -a array=( 2 3 4 5 6 7 8 9 10 25 50 100 500 900 1000 )
 length=${#array[@]}
 # Repeat the while loop for each field of array
 printf "The average number of operations repeated $NTIMES times\n"
-BEST=100000000000
 WORST=0
 for (( i=0; i < ${length}; i++ ))
 do
@@ -28,6 +27,7 @@ do
 	SUM=0
 	FROM=1
 	TO=${array[$i]}
+	BEST=100000000000
 	printf "[%d %5d] " $FROM $TO
 	while [ $I -lt $NTIMES ]; do
 		ARG=$(ruby -e "puts ($FROM..$TO).to_a.shuffle.join(' ')");
