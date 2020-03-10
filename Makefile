@@ -6,7 +6,7 @@
 #    By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/20 11:39:15 by amalsago          #+#    #+#              #
-#    Updated: 2020/03/09 12:07:03 by amalsago         ###   ########.fr        #
+#    Updated: 2020/03/10 10:48:37 by amalsago         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,27 +46,31 @@ INCDIR      = ./includes
 # **************************************************************************** #
 # List of source files
 
-SRC_SHARED     = errors.c\
-                 operations.c\
-                 parse_args.c\
-                 push.c\
-                 reverse_rotate.c\
-                 rotate.c\
-                 stack.c\
-                 swap.c\
-                 is_sorted.c\
-                 tools.c
+SRC_OPERATIONS = operations/push.c\
+                 operations/reverse_rotate.c\
+                 operations/rotate.c\
+                 operations/swap.c\
+
+SRC_SORT       = sort/qsort_ps.c\
+                 sort/small_sort.c\
+                 sort/sort_stack.c
+
+SRC_SHARED     = tools/errors.c\
+                 tools/operations.c\
+                 tools/parse_args.c\
+                 tools/stack.c\
+                 tools/is_sorted.c\
+                 tools/tools.c\
+                 $(SRC_OPERATIONS)
 
 SRC_CHECKER    = main_ch.c\
                  $(SRC_SHARED)
 
 SRC_PUSHSWAP   = main_ps.c\
-                 fast_rotate.c\
-                 get_index.c\
-                 qsort_ps.c\
-                 repeat_op.c\
-                 small_sort.c\
-                 sort_stack.c\
+                 tools/fast_rotate.c\
+                 tools/get_index.c\
+                 tools/repeat_op.c\
+                 $(SRC_SORT)\
                  $(SRC_SHARED)
 
 # **************************************************************************** #
