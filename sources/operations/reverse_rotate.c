@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 14:53:13 by amalsago          #+#    #+#             */
-/*   Updated: 2020/03/09 08:21:32 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/10 20:44:48 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,13 @@ static void		rotate_down(int *stack, int top_index)
 	int			low;
 
 	i = -1;
-	low = stack[0];
-	while (++i < top_index)
-		stack[i] = stack[i + 1];
-	stack[top_index] = low;
+	if (top_index > 0)
+	{
+		low = stack[0];
+		while (++i < top_index)
+			stack[i] = stack[i + 1];
+		stack[top_index] = low;
+	}
 }
 
 void			rra(int print_op)
