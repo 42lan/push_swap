@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 11:58:13 by amalsago          #+#    #+#             */
-/*   Updated: 2020/03/08 17:30:16 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/10 13:52:57 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,6 +97,7 @@ void			sort5(t_stack *stack);
 ** TOOLS
 */
 
+int				adapted_div(int size);
 int				get_imin(int *stack, int size);
 int				get_imax(int *stack, int size);
 void			repeat_op(void (*op)(int), int print_op, int n);

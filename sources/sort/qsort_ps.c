@@ -6,41 +6,11 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 19:57:13 by amalsago          #+#    #+#             */
-/*   Updated: 2020/03/10 00:06:21 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/10 13:54:53 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-int				adapted_div(int size)
-{
-	if (size <= 50)
-		return (3);
-	else if (size > 50 && size <= 110)
-		return (4);
-	else if (size > 110 && size <= 170)
-		return (5);
-	else if (size > 170 && size <= 240)
-		return (6);
-	else if (size > 240 && size <= 300)
-		return (7);
-	else if (size > 300 && size <= 370)
-		return (8);
-	else if (size > 370 && size <= 420)
-		return (9);
-	else if (size > 420 && size <= 490)
-		return (10);
-	else if (size > 490 && size <= 540)
-		return (11);
-	else if (size > 520 && size <= 540)
-		return (12);
-	else if (size > 540 && size <= 800)
-		return (14);
-	else if (size > 800 && size <= 1050)
-		return (16);
-	else
-		return (2);
-}
 
 static int		median_qs(int *a, int size)
 {

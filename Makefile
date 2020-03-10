@@ -6,7 +6,7 @@
 #    By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/20 11:39:15 by amalsago          #+#    #+#              #
-#    Updated: 2020/03/10 10:48:37 by amalsago         ###   ########.fr        #
+#    Updated: 2020/03/10 13:53:24 by amalsago         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,7 +55,8 @@ SRC_SORT       = sort/qsort_ps.c\
                  sort/small_sort.c\
                  sort/sort_stack.c
 
-SRC_SHARED     = tools/errors.c\
+SRC_SHARED     = tools/adapted_div.c\
+                 tools/errors.c\
                  tools/operations.c\
                  tools/parse_args.c\
                  tools/stack.c\
