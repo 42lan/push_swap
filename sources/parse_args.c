@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 12:02:03 by amalsago          #+#    #+#             */
-/*   Updated: 2020/03/08 17:10:54 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/10 10:25:00 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void			parse_args(int ac, char ***p_av)
 	(ac == 1) ? *p_av = prepare_args(*p_av) : 0;
 	if (check_ints(*p_av) || check_dups(*p_av) || check_lims(*p_av))
 	{
-		(ac == 1) ? ft_memdel((void **)*p_av) : 0;
+		(ac == 1) ? ft_strarraydel(p_av) : 0;
 		ft_perror_exit(SGR_FG_RED"Error"SGR_NORMAL);
 	}
 }
