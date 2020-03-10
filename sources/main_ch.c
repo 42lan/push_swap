@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 11:52:46 by amalsago          #+#    #+#             */
-/*   Updated: 2020/03/09 14:40:11 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/10 10:18:50 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,5 @@ int				main(int ac, char **av)
 	read_and_execute();
 	ret = (is_sorted(PRINT_STATUS_ON) == SUCCESS) ? SUCCESS : FAILURE;
 	free_stack();
-	(ac == 1) ? ft_memdel((void **)&av) : 0;
 	return (ret);
 }
