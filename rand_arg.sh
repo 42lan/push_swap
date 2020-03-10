@@ -6,7 +6,7 @@
 #    By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/05 16:34:25 by amalsago          #+#    #+#              #
-#    Updated: 2020/03/07 17:36:39 by amalsago         ###   ########.fr        #
+#    Updated: 2020/03/10 14:53:22 by amalsago         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ if [[ ! -f $PUSH_SWAP || ! -f $CHECKER ]]; then
 fi
 
 while true; do
-	RAND=$(ruby -e "puts rand(1..20)")
+	RAND=$(ruby -e "puts rand(1..1000)")
 	ARG=$(ruby -e "puts (1..$RAND).to_a.shuffle.join(' ')");
 	$PUSH_SWAP $ARG | $CHECKER $ARG
 	if [ $? -eq 1 ]; then
