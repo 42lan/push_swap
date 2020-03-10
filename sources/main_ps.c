@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/20 11:52:46 by amalsago          #+#    #+#             */
-/*   Updated: 2020/03/10 10:19:57 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/10 19:28:21 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ int		main(int ac, char **av)
 	parse_args(ac, &(av));
 	if (initialize_stack(ac, av) == FAILURE)
 		exit(EXIT_FAILURE);
-	sort_stack();
+	if (is_sorted(PRINT_STATUS_OFF) == FAILURE)
+		sort_stack();
 	free_stack();
 	return (SUCCESS);
 }
