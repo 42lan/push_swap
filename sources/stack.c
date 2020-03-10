@@ -6,7 +6,7 @@
 /*   By: amalsago <amalsago@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/22 01:59:39 by amalsago          #+#    #+#             */
-/*   Updated: 2020/03/09 08:23:08 by amalsago         ###   ########.fr       */
+/*   Updated: 2020/03/10 10:25:41 by amalsago         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,6 @@ int					initialize_stack(int ac, char **av)
 	}
 	stack()->tia = size - 1;
 	stack()->tib = -1;
-	(ac == 1) ? ft_memdel((void **)av) : 0;
+	(ac == 1) ? ft_strarraydel(&av) : 0;
 	return (SUCCESS);
 }
